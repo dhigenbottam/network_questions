@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#142d4e">
+  <title>Python Quest | Year 8 Computing</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Computing Quests home">
+        <span class="brand-mark" aria-hidden="true">&lt;&gt;</span>
+        <span>PYTHON <span class="brand-light">QUEST</span></span>
+      </a>
+      <span class="level-tag">YEAR 8 COMPUTING</span>
+    </header>
+
+    <section class="quiz-card" aria-labelledby="page-title">
+      <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> YOUR MISSION</div>
+      <h1 id="page-title">Ready to think<br>like a Python coder?</h1>
+      <p class="intro">Ten questions on expressions, data, decisions, and loops. Let’s code!</p>
+
+      <div class="progress-area">
+        <div class="progress-label">
+          <span id="question-count">Question 1 of 10</span>
+          <span id="progress-percent">10%</span>
+        </div>
+        <div
+          id="progress-track"
+          class="progress-track"
+          role="progressbar"
+          aria-label="Quiz progress"
+          aria-valuemin="0"
+          aria-valuemax="10"
+          aria-valuenow="1"
+        >
+          <span id="progress-bar" class="progress-bar"></span>
+        </div>
+      </div>
+
+      <div id="quiz-content">
+        <h2 id="question" class="question" tabindex="-1"></h2>
+        <form id="answer-form">
+          <fieldset id="answers" class="answers">
+            <legend class="visually-hidden">Choose one answer</legend>
+          </fieldset>
+          <p id="feedback" class="feedback" aria-live="polite"></p>
+          <button id="submit-button" class="button button-primary" type="submit" disabled>
+            Check answer <span aria-hidden="true">→</span>
+          </button>
+        </form>
+      </div>
+
+      <section id="results" class="results" aria-labelledby="results-title" hidden>
+        <div id="result-icon" class="result-icon" aria-hidden="true">★</div>
+        <p class="eyebrow">MISSION COMPLETE</p>
+        <h2 id="results-title">Nice work!</h2>
+        <p id="score-message" class="score-message"></p>
+        <p id="score-detail" class="score-detail"></p>
+        <button id="restart-button" class="button button-primary" type="button">
+          Have another go <span aria-hidden="true">↻</span>
+        </button>
+      </section>
+    </section>
+
+    <footer>Read each expression carefully, then make your choice.</footer>
+  </main>
+  <script id="quiz-questions" type="application/json">
+  [
+    {
+      "question": "What is the result of the Python expression 5 + 2 * 3?",
+      "answers": ["21", "11", "15", "13"],
+      "correct": 1,
+      "explanation": "Multiplication happens before addition, so 2 * 3 is 6, then 5 + 6 is 11."
+    },
+    {
+      "question": "What is the value of total after this code runs?\nscore = 4\ntotal = score + 3",
+      "answers": ["3", "4", "7", "43"],
+      "correct": 2,
+      "explanation": "The variable score stores 4. Adding 3 gives total the value 7."
+    },
+    {
+      "question": "Which data type is the value 12 in Python?",
+      "answers": ["string", "float", "integer", "Boolean"],
+      "correct": 2,
+      "explanation": "A whole number such as 12 is an integer (int)."
+    },
+    {
+      "question": "Which value is a float in Python?",
+      "answers": ["7", "\"7\"", "7.0", "True"],
+      "correct": 2,
+      "explanation": "A float is a number with a decimal point, such as 7.0."
+    },
+    {
+      "question": "Which value is a string in Python?",
+      "answers": ["42", "3.14", "\"42\"", "False"],
+      "correct": 2,
+      "explanation": "Text in quotation marks is a string. Even though it looks like a number, \"42\" is text."
+    },
+    {
+      "question": "What does the expression \"Hi\" + \"!\" produce?",
+      "answers": ["Hi!", "Hi + !", "An error every time", "Hi1"],
+      "correct": 0,
+      "explanation": "The + operator joins (concatenates) strings together, producing Hi!."
+    },
+    {
+      "question": "What will this code display if temperature is 24?\nif temperature > 20:\n    print(\"Warm\")\nelse:\n    print(\"Cool\")",
+      "answers": ["Cool", "Warm", "24", "Nothing"],
+      "correct": 1,
+      "explanation": "24 is greater than 20, so the if condition is true and Python displays Warm."
+    },
+    {
+      "question": "Which operator checks whether two values are equal in Python?",
+      "answers": ["=", "==", "!=", "=>"],
+      "correct": 1,
+      "explanation": "Use == to compare values. A single = assigns a value to a variable."
+    },
+    {
+      "question": "What numbers are displayed by this loop?\nfor number in range(3):\n    print(number)",
+      "answers": ["1, 2, 3", "0, 1, 2", "0, 1, 2, 3", "3 only"],
+      "correct": 1,
+      "explanation": "range(3) generates 0, 1, and 2. The stop value 3 is not included."
+    },
+    {
+      "question": "How many times does this while loop display a number?\ncount = 1\nwhile count < 4:\n    print(count)\n    count = count + 1",
+      "answers": ["2 times", "3 times", "4 times", "It never stops"],
+      "correct": 1,
+      "explanation": "It displays 1, 2, and 3. Each iteration increases count, so the loop stops when count reaches 4."
+    }
+  ]
+  </script>
+</body>
+</html>

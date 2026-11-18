@@ -90,6 +90,101 @@ input {
   box-shadow: 0 22px 65px rgba(41, 69, 103, 0.12);
 }
 
+.home-intro {
+  padding: 38px 42px 32px;
+  border: 1px solid rgba(204, 218, 234, 0.8);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 22px 65px rgba(41, 69, 103, 0.12);
+}
+
+.home-intro .intro {
+  margin-bottom: 0;
+}
+
+.quiz-list {
+  display: grid;
+  gap: 13px;
+  margin-top: 16px;
+}
+
+.quiz-link-card {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 19px 21px;
+  border: 1px solid rgba(204, 218, 234, 0.9);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 10px 28px rgba(41, 69, 103, 0.07);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.quiz-link-card:hover {
+  transform: translateY(-2px);
+  border-color: #9eb9d1;
+  box-shadow: 0 15px 34px rgba(41, 69, 103, 0.12);
+}
+
+.quiz-link-card:focus-visible {
+  outline: 3px solid rgba(50, 121, 180, 0.35);
+  outline-offset: 3px;
+}
+
+.quiz-card-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 14px;
+  background: #e7f2fb;
+  color: #236897;
+  font-family: Consolas, monospace;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.python-icon {
+  background: #e8f7f0;
+  color: #267c5c;
+  font-size: 15px;
+}
+
+.quiz-link-copy {
+  display: grid;
+  flex: 1;
+  gap: 5px;
+}
+
+.quiz-link-meta {
+  color: #71859a;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.quiz-link-title {
+  color: #1d3855;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.quiz-link-description {
+  color: #708197;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.quiz-link-arrow {
+  color: #52718f;
+  font-size: 21px;
+}
+
 .eyebrow {
   display: flex;
   align-items: center;
@@ -166,6 +261,7 @@ h1 {
   font-size: 19px;
   line-height: 1.45;
   letter-spacing: -0.02em;
+  white-space: pre-wrap;
 }
 
 .answers {
@@ -378,6 +474,30 @@ footer {
   .quiz-card {
     padding: 30px 22px 29px;
     border-radius: 17px;
+  }
+
+  .home-intro {
+    padding: 30px 22px 25px;
+    border-radius: 17px;
+  }
+
+  .quiz-link-card {
+    gap: 12px;
+    padding: 15px 13px;
+  }
+
+  .quiz-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  .quiz-link-title {
+    font-size: 16px;
+  }
+
+  .quiz-link-description {
+    font-size: 11px;
   }
 
   .intro {

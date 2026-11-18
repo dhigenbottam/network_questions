@@ -1,115 +1,4 @@
-const questions = [
-  {
-    question: "What is a computer network?",
-    answers: [
-      "A group of connected devices that can share information",
-      "A program used to draw pictures",
-      "A single computer with a large screen",
-      "A type of computer keyboard"
-    ],
-    correct: 0,
-    explanation: "A network connects devices so they can communicate and share resources."
-  },
-  {
-    question: "Which network usually connects devices across a school building?",
-    answers: [
-      "A WAN (Wide Area Network)",
-      "A LAN (Local Area Network)",
-      "The World Wide Web",
-      "A personal area network only"
-    ],
-    correct: 1,
-    explanation: "A LAN connects devices in a small area, such as a school, home, or office."
-  },
-  {
-    question: "What does a router do in a home network?",
-    answers: [
-      "Prints documents from every computer",
-      "Stores every website on the internet",
-      "Directs data between devices and other networks",
-      "Protects a screen from scratches"
-    ],
-    correct: 2,
-    explanation: "A router directs data to the right place, including between your home network and the internet."
-  },
-  {
-    question: "What is the internet?",
-    answers: [
-      "One very large computer",
-      "A worldwide network of connected networks",
-      "Another name for Wi-Fi",
-      "A program that sends emails"
-    ],
-    correct: 1,
-    explanation: "The internet is a huge collection of connected networks around the world."
-  },
-  {
-    question: "Which of these is an example of a server?",
-    answers: [
-      "A computer that provides files or services to other computers",
-      "A cable that connects a screen",
-      "A password written on paper",
-      "A computer mouse"
-    ],
-    correct: 0,
-    explanation: "A server provides resources, such as files or web pages, to other devices on a network."
-  },
-  {
-    question: "What is one advantage of using a network to share a printer?",
-    answers: [
-      "Each person needs a separate printer",
-      "The printer works without electricity",
-      "Several users can use the same printer",
-      "It makes every document public"
-    ],
-    correct: 2,
-    explanation: "Sharing a printer means multiple devices can use one printer on the network."
-  },
-  {
-    question: "What does Wi-Fi let a device do?",
-    answers: [
-      "Connect to a network wirelessly",
-      "Make its battery last forever",
-      "Turn a file into a website",
-      "Work without any network equipment"
-    ],
-    correct: 0,
-    explanation: "Wi-Fi uses radio signals to connect devices to a network without a cable."
-  },
-  {
-    question: "Which device is used to connect a computer to a wired network?",
-    answers: [
-      "A webcam",
-      "A network interface card (NIC)",
-      "A speaker",
-      "A graphics tablet"
-    ],
-    correct: 1,
-    explanation: "A network interface card (NIC) allows a device to connect to a network."
-  },
-  {
-    question: "Why should you use a strong password on a network?",
-    answers: [
-      "To make the internet faster",
-      "To stop the computer from needing updates",
-      "To help keep your account and data safe",
-      "To let anyone connect more easily"
-    ],
-    correct: 2,
-    explanation: "A strong password makes it harder for someone else to access your account or data."
-  },
-  {
-    question: "What is one possible disadvantage of a computer network?",
-    answers: [
-      "Devices can never share files",
-      "A network problem may stop people accessing shared resources",
-      "Computers cannot connect to printers",
-      "Every device must be in a different building"
-    ],
-    correct: 1,
-    explanation: "If part of a network fails, users may temporarily lose access to shared files or devices."
-  }
-];
+const questions = JSON.parse(document.querySelector("#quiz-questions").textContent);
 
 const questionCount = document.querySelector("#question-count");
 const progressPercent = document.querySelector("#progress-percent");
@@ -190,10 +79,10 @@ function showResults() {
 
   if (score === questions.length) {
     resultIcon.textContent = "★";
-    scoreDetail.textContent = "Perfect score! You’re a network superstar.";
+    scoreDetail.textContent = "Perfect score! You’re a computing superstar.";
   } else if (score >= 7) {
     resultIcon.textContent = "✓";
-    scoreDetail.textContent = "Great job! You know your way around a network.";
+    scoreDetail.textContent = "Great job! You know your stuff.";
   } else if (score >= 4) {
     resultIcon.textContent = "↗";
     scoreDetail.textContent = "Good effort! A little more practice will make you a pro.";

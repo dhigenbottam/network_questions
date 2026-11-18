@@ -4,69 +4,48 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#142d4e">
-  <title>Network Quest | Year 7 Computing</title>
+  <meta name="description" content="Choose a computing quiz and test your knowledge.">
+  <title>Computing Quests | Quiz Library</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
   <main class="page">
     <header class="site-header">
-      <a class="brand" href="./" aria-label="Network Quest home">
-        <span class="brand-mark" aria-hidden="true">N</span>
-        <span>NETWORK <span class="brand-light">QUEST</span></span>
+      <a class="brand" href="./" aria-label="Computing Quests home">
+        <span class="brand-mark" aria-hidden="true">Q</span>
+        <span>COMPUTING <span class="brand-light">QUESTS</span></span>
       </a>
-      <span class="level-tag">YEAR 7 COMPUTING</span>
+      <span class="level-tag">QUIZ LIBRARY</span>
     </header>
 
-    <section class="quiz-card" aria-labelledby="page-title">
-      <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> YOUR MISSION</div>
-      <h1 id="page-title">How well do you know<br>computer networks?</h1>
-      <p class="intro">Ten questions. One network expert. Let’s find out what you know.</p>
-
-      <div class="progress-area">
-        <div class="progress-label">
-          <span id="question-count">Question 1 of 10</span>
-          <span id="progress-percent">10%</span>
-        </div>
-        <div
-          id="progress-track"
-          class="progress-track"
-          role="progressbar"
-          aria-label="Quiz progress"
-          aria-valuemin="0"
-          aria-valuemax="10"
-          aria-valuenow="1"
-        >
-          <span id="progress-bar" class="progress-bar"></span>
-        </div>
-      </div>
-
-      <div id="quiz-content">
-        <h2 id="question" class="question" tabindex="-1"></h2>
-        <form id="answer-form">
-          <fieldset id="answers" class="answers">
-            <legend class="visually-hidden">Choose one answer</legend>
-          </fieldset>
-          <p id="feedback" class="feedback" aria-live="polite"></p>
-          <button id="submit-button" class="button button-primary" type="submit" disabled>
-            Check answer <span aria-hidden="true">→</span>
-          </button>
-        </form>
-      </div>
-
-      <section id="results" class="results" aria-labelledby="results-title" hidden>
-        <div id="result-icon" class="result-icon" aria-hidden="true">★</div>
-        <p class="eyebrow">MISSION COMPLETE</p>
-        <h2 id="results-title">Nice work!</h2>
-        <p id="score-message" class="score-message"></p>
-        <p id="score-detail" class="score-detail"></p>
-        <button id="restart-button" class="button button-primary" type="button">
-          Have another go <span aria-hidden="true">↻</span>
-        </button>
-      </section>
+    <section class="home-intro" aria-labelledby="page-title">
+      <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> PICK YOUR NEXT CHALLENGE</div>
+      <h1 id="page-title">Learn a little.<br>Level up a lot.</h1>
+      <p class="intro">Choose a quiz, test what you know, and see how you score.</p>
     </section>
 
-    <footer>Think carefully, choose your answer, and build your network knowledge.</footer>
+    <section class="quiz-list" aria-label="Available quizzes">
+      <a class="quiz-link-card" href="network/">
+        <span class="quiz-card-icon network-icon" aria-hidden="true">N</span>
+        <span class="quiz-link-copy">
+          <span class="quiz-link-meta">YEAR 7 · 10 QUESTIONS</span>
+          <span class="quiz-link-title">Computer Networks</span>
+          <span class="quiz-link-description">Explore devices, connections, and sharing information.</span>
+        </span>
+        <span class="quiz-link-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="quiz-link-card" href="python/">
+        <span class="quiz-card-icon python-icon" aria-hidden="true">&lt;&gt;</span>
+        <span class="quiz-link-copy">
+          <span class="quiz-link-meta">YEAR 8 · 10 QUESTIONS</span>
+          <span class="quiz-link-title">Python Coding</span>
+          <span class="quiz-link-description">Practise expressions, data types, selection, and loops.</span>
+        </span>
+        <span class="quiz-link-arrow" aria-hidden="true">→</span>
+      </a>
+    </section>
+
+    <footer>More computing quests can be added here as you build them.</footer>
   </main>
 </body>
 </html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#142d4e">
+  <title>Network Quest | Year 7 Computing</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Computing Quests home">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span>NETWORK <span class="brand-light">QUEST</span></span>
+      </a>
+      <span class="level-tag">YEAR 7 COMPUTING</span>
+    </header>
+
+    <section class="quiz-card" aria-labelledby="page-title">
+      <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> YOUR MISSION</div>
+      <h1 id="page-title">How well do you know<br>computer networks?</h1>
+      <p class="intro">Ten questions. One network expert. Let’s find out what you know.</p>
+
+      <div class="progress-area">
+        <div class="progress-label">
+          <span id="question-count">Question 1 of 10</span>
+          <span id="progress-percent">10%</span>
+        </div>
+        <div
+          id="progress-track"
+          class="progress-track"
+          role="progressbar"
+          aria-label="Quiz progress"
+          aria-valuemin="0"
+          aria-valuemax="10"
+          aria-valuenow="1"
+        >
+          <span id="progress-bar" class="progress-bar"></span>
+        </div>
+      </div>
+
+      <div id="quiz-content">
+        <h2 id="question" class="question" tabindex="-1"></h2>
+        <form id="answer-form">
+          <fieldset id="answers" class="answers">
+            <legend class="visually-hidden">Choose one answer</legend>
+          </fieldset>
+          <p id="feedback" class="feedback" aria-live="polite"></p>
+          <button id="submit-button" class="button button-primary" type="submit" disabled>
+            Check answer <span aria-hidden="true">→</span>
+          </button>
+        </form>
+      </div>
+
+      <section id="results" class="results" aria-labelledby="results-title" hidden>
+        <div id="result-icon" class="result-icon" aria-hidden="true">★</div>
+        <p class="eyebrow">MISSION COMPLETE</p>
+        <h2 id="results-title">Nice work!</h2>
+        <p id="score-message" class="score-message"></p>
+        <p id="score-detail" class="score-detail"></p>
+        <button id="restart-button" class="button button-primary" type="button">
+          Have another go <span aria-hidden="true">↻</span>
+        </button>
+      </section>
+    </section>
+
+    <footer>Think carefully, choose your answer, and build your network knowledge.</footer>
+  </main>
+  <script id="quiz-questions" type="application/json">
+  [
+    {
+      "question": "What is a computer network?",
+      "answers": ["A group of connected devices that can share information", "A program used to draw pictures", "A single computer with a large screen", "A type of computer keyboard"],
+      "correct": 0,
+      "explanation": "A network connects devices so they can communicate and share resources."
+    },
+    {
+      "question": "Which network usually connects devices across a school building?",
+      "answers": ["A WAN (Wide Area Network)", "A LAN (Local Area Network)", "The World Wide Web", "A personal area network only"],
+      "correct": 1,
+      "explanation": "A LAN connects devices in a small area, such as a school, home, or office."
+    },
+    {
+      "question": "What does a router do in a home network?",
+      "answers": ["Prints documents from every computer", "Stores every website on the internet", "Directs data between devices and other networks", "Protects a screen from scratches"],
+      "correct": 2,
+      "explanation": "A router directs data to the right place, including between your home network and the internet."
+    },
+    {
+      "question": "What is the internet?",
+      "answers": ["One very large computer", "A worldwide network of connected networks", "Another name for Wi-Fi", "A program that sends emails"],
+      "correct": 1,
+      "explanation": "The internet is a huge collection of connected networks around the world."
+    },
+    {
+      "question": "Which of these is an example of a server?",
+      "answers": ["A computer that provides files or services to other computers", "A cable that connects a screen", "A password written on paper", "A computer mouse"],
+      "correct": 0,
+      "explanation": "A server provides resources, such as files or web pages, to other devices on a network."
+    },
+    {
+      "question": "What is one advantage of using a network to share a printer?",
+      "answers": ["Each person needs a separate printer", "The printer works without electricity", "Several users can use the same printer", "It makes every document public"],
+      "correct": 2,
+      "explanation": "Sharing a printer means multiple devices can use one printer on the network."
+    },
+    {
+      "question": "What does Wi-Fi let a device do?",
+      "answers": ["Connect to a network wirelessly", "Make its battery last forever", "Turn a file into a website", "Work without any network equipment"],
+      "correct": 0,
+      "explanation": "Wi-Fi uses radio signals to connect devices to a network without a cable."
+    },
+    {
+      "question": "Which device is used to connect a computer to a wired network?",
+      "answers": ["A webcam", "A network interface card (NIC)", "A speaker", "A graphics tablet"],
+      "correct": 1,
+      "explanation": "A network interface card (NIC) allows a device to connect to a network."
+    },
+    {
+      "question": "Why should you use a strong password on a network?",
+      "answers": ["To make the internet faster", "To stop the computer from needing updates", "To help keep your account and data safe", "To let anyone connect more easily"],
+      "correct": 2,
+      "explanation": "A strong password makes it harder for someone else to access your account or data."
+    },
+    {
+      "question": "What is one possible disadvantage of a computer network?",
+      "answers": ["Devices can never share files", "A network problem may stop people accessing shared resources", "Computers cannot connect to printers", "Every device must be in a different building"],
+      "correct": 1,
+      "explanation": "If part of a network fails, users may temporarily lose access to shared files or devices."
+    }
+  ]
+  </script>
+</body>
+</html>
