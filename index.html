@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#142d4e">
+  <title>Network Quest | Year 7 Computing</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Network Quest home">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span>NETWORK <span class="brand-light">QUEST</span></span>
+      </a>
+      <span class="level-tag">YEAR 7 COMPUTING</span>
+    </header>
+
+    <section class="quiz-card" aria-labelledby="page-title">
+      <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> YOUR MISSION</div>
+      <h1 id="page-title">How well do you know<br>computer networks?</h1>
+      <p class="intro">Ten questions. One network expert. Let’s find out what you know.</p>
+
+      <div class="progress-area">
+        <div class="progress-label">
+          <span id="question-count">Question 1 of 10</span>
+          <span id="progress-percent">10%</span>
+        </div>
+        <div
+          id="progress-track"
+          class="progress-track"
+          role="progressbar"
+          aria-label="Quiz progress"
+          aria-valuemin="0"
+          aria-valuemax="10"
+          aria-valuenow="1"
+        >
+          <span id="progress-bar" class="progress-bar"></span>
+        </div>
+      </div>
+
+      <div id="quiz-content">
+        <h2 id="question" class="question" tabindex="-1"></h2>
+        <form id="answer-form">
+          <fieldset id="answers" class="answers">
+            <legend class="visually-hidden">Choose one answer</legend>
+          </fieldset>
+          <p id="feedback" class="feedback" aria-live="polite"></p>
+          <button id="submit-button" class="button button-primary" type="submit" disabled>
+            Check answer <span aria-hidden="true">→</span>
+          </button>
+        </form>
+      </div>
+
+      <section id="results" class="results" aria-labelledby="results-title" hidden>
+        <div id="result-icon" class="result-icon" aria-hidden="true">★</div>
+        <p class="eyebrow">MISSION COMPLETE</p>
+        <h2 id="results-title">Nice work!</h2>
+        <p id="score-message" class="score-message"></p>
+        <p id="score-detail" class="score-detail"></p>
+        <button id="restart-button" class="button button-primary" type="button">
+          Have another go <span aria-hidden="true">↻</span>
+        </button>
+      </section>
+    </section>
+
+    <footer>Think carefully, choose your answer, and build your network knowledge.</footer>
+  </main>
+</body>
+</html>
